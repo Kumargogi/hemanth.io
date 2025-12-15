@@ -1,155 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hemanth Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <title>Hemanth - The DevOps Shinobi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
 <style>
+/* --- 1. THEMATIC COLOR PALETTE (DevOps/Dark Anime) --- */
+:root {
+    --color-primary: #00bcd4; /* DevOps Teal/Cyan */
+    --color-secondary: #ff5722; /* Vibrant Orange/Rasen-Shuriken */
+    --color-bg-dark: #121212; /* Deep Black background */
+    --color-text-light: #f0f0f0;
+    --color-progress: #00bcd4; /* Match primary */
+}
+
+/* Override external styles with thematic colors */
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+}
+.hero {
+    background-color: var(--color-bg-dark) !important;
+}
+.navbar-brand {
+    color: var(--color-primary) !important;
+}
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: var(--color-progress); /* Teal */
+}
+.btn-primary {
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+.ftco-navbar .navbar-nav > .nav-item > .nav-link:hover, 
+.ftco-navbar .navbar-nav > .nav-item > .nav-link.active {
+    color: var(--color-secondary) !important; /* Orange accent on active */
+}
+#typing-animation {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--color-secondary); /* Orange */
+  animation: typing 3s steps(20, end) infinite;
+}
+
 
 /*======================================
-//--//-->   ABOUT
+//--//--> ABOUT & SKILLS ENHANCEMENTS
 ======================================*/
 
 .about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-
 .about-mf .about-img {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
-
 .about-mf .about-img img {
-  margin-left: 10px;
+  margin-left: 10px;
+  /* Add subtle neon glow to profile image */
+  box-shadow: 0 0 15px var(--color-primary), 0 0 5px var(--color-primary) inset;
+  transition: all 0.5s ease;
 }
-
+.about-mf .about-img img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px var(--color-secondary), 0 0 10px var(--color-secondary) inset;
+}
 
 .skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Darker progress bar track */
 }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+/* Custom Skill Styling for a unique look */
+.skill-mf span {
+    color: var(--color-primary);
+    font-weight: 600;
 }
 
 
-/* project image zoom effect */
+/*======================================
+//--//--> PROJECT IMAGE ZOOM EFFECT
+======================================*/
 
 .zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
 }
 
 .zoom-effect:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Slightly less aggressive zoom */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Custom bullet point for resume list */
+.resume-wrap ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--color-text-light);
+}
+
+.resume-wrap ul li::before {
+    content: '▶'; /* Right-pointing triangle as the bullet */
+    color: var(--color-secondary); /* Orange accent */
+    font-size: 0.8em;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.resume-wrap h2 {
+    color: var(--color-primary);
+}
+.resume-wrap .position {
+    color: var(--color-secondary);
+}
+
+/* --- 2. THEMATIC HEADER ANIMATION (CHAKRA FLOW) --- */
+
+#home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Add subtle background pattern or texture */
+    background: radial-gradient(circle, rgba(0, 188, 212, 0.1) 0%, rgba(18, 18, 18, 0) 70%);
+    animation: chakra-pulse 10s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes chakra-pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+/* Custom Social Links (LinkedIn, Blog, Twitter) */
+.ftco-footer-social a {
+    background: var(--color-secondary) !important;
+    color: var(--color-bg-dark) !important;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.ftco-footer-social a:hover {
+    background: var(--color-primary) !important;
+    color: var(--color-text-contrast) !important;
+    transform: translateY(-3px);
+}
+/* Style for custom added social links in the footer */
+.ftco-footer-social .icon-linkedin, .ftco-footer-social .icon-twitter, .ftco-footer-social .icon-blog {
+    font-size: 20px;
+    padding: 10px; /* Adjust padding for uniformity */
+}
+
+/* Use Font Awesome for specific icons */
+.ftco-footer-social .icon-blog::before {
+    content: "\f0d7"; /* Use a Font Awesome icon code for blog, e.g., fa-book */
+    font-family: 'Font Awesome 6 Free'; 
+    font-weight: 900;
+}
+.ftco-footer-social .icon-twitter::before {
+    content: "\f099"; /* Twitter X icon (old) */
+    font-family: 'Font Awesome 6 Brands';
+}
+.ftco-footer-social .icon-linkedin::before {
+    content: "\f0e1"; /* LinkedIn icon */
+    font-family: 'Font Awesome 6 Brands';
+}
+
+/* New Social Links in Footer */
+.ftco-footer-social .normal-txt {
+    color: var(--color-text-light);
+    margin-right: 15px;
+    font-size: 1.1em;
+}
 
 </style>
 
 
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Hemanth</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Hemanth</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-			  <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/diu.1.jpeg);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Hemanth</span></h1>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+			  <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/diu.1.jpeg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello! I am The Ninja of Automation</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Hemanth</span></h1>
 
-						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
 
 						<script>
@@ -159,9 +248,10 @@
 
 						// Create an array of typing text
 						const typingTexts = [
-						'DevOps Engineer',
-						'Bloger',
-						'Trainer ',
+						'AWS DevOps Engineer',
+						'IaC Specialist',
+						'CI/CD Orchestrator',
+						'Kubernetes Ninja',
 						];
 
 						// Create a function to display the typing animation for a given text
@@ -170,14 +260,14 @@
 						for (let i = 0; i < text.length; i++) {
 							setTimeout(() => {
 							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
+							}, i * 150); // Faster typing animation
 						}
 
 						// Once the animation is complete, reset the text and start over
 						setTimeout(() => {
 							typingAnimationElement.textContent = '';
 							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
+						}, text.length * 150 + 1000); // Wait 1 second before restarting
 						}
 
 						// Start the typing animation loop
@@ -187,75 +277,71 @@
 
 						<br>
 						<br>
-			            <h2>A Passionate DevOps Engineer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://hashnode.com/@hemanth57" class="btn btn-primary py-3 px-4">Blogs</a> 
-							<a href="https://github.com/Kumargogi" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
+			            <h2>A Passionate DevOps Engineer</h2>
+						            <p><a href="https://hashnode.com/@hemanth57" class="btn btn-primary py-3 px-4">Blogs</a> 
+							<a href="https://github.com/Kumargogi" class="btn btn-white btn-outline-white py-3 px-4">My Works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
 		</div>
-    </section>
+    </section>
 
 
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
+				<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
+									  <div class="about-img">
 										<img src="images/diu.1.jpeg" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
+									  </div>
 									</div>
-									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
+									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Hemanth</span></p>
 										<p><span class="title-s">Job Role: </span> <span>DevOps Engineer</span></p>
 										<p><span class="title-s">Experience: </span> <span>2.6 Years</span></p>
 										<p><span class="title-s">Address: </span> <span>Pune, India</span></p>
-									  </div>
+									  </div>
 									</div>
-								  </div>
+								  </div>
 
 								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>Configuration Management</span> <span class="pull-right">80%</span>
+									<p class="title-s">Jutsu Proficiency (Skills)</p>
+									<span>Configuration Management (Ansible)</span> <span class="pull-right">80%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Infrastructure as Code (IaC)</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span> Continuous Integration/Continuous Deployment (CI/CD) Tools</span> <span class="pull-right">90%</span>
+									<span>Infrastructure as Code (Terraform)</span> <span class="pull-right">90%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Version Control Tools</span> <span class="pull-right">85%</span>
+									<span>CI/CD Tools (Jenkins, GitLab, Argo CD)</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Version Control (GIT, GitHub, Gerrit)</span> <span class="pull-right">85%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Containerization Tools</span> <span class="pull-right">80%</span>
+									<span>Containerization (Docker & Kubernetes)</span> <span class="pull-right">85%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -268,20 +354,20 @@
 							<div class="col-md-12 heading-section ftco-animate">
 								
 								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
+								<h2 class="mb-4">The Shinobi Way (About Me)</h2>
 								
-								<p>Hi, I’m Hemanth, a passionate and results-driven DevOps Engineer with 2.6 years of hands-on experience in designing, implementing, and optimizing CI/CD pipelines, infrastructure automation, and cloud-native solutions. I thrive in collaborative environments where I can leverage my technical expertise to streamline development workflows, enhance system reliability, and deliver scalable, secure, and efficient solutions.
+								<p>Hi, I’m Hemanth, a passionate **AWS DevOps Engineer** with **2.6 years** of hands-on experience in building and managing scalable cloud infrastructure and automating the continuous delivery pipeline. I specialize in transforming manual, slow processes into secure, efficient, and reliable workflows.</p>
 
-									My journey in DevOps has equipped me with a strong foundation in tools and technologies like Git, Maven, Jenkins, Docker, Kubernetes (K8s), Terraform, and AWS Cloud. I specialize in automating infrastructure provisioning, managing containerized applications, and ensuring seamless deployments across diverse environments.
+								<p>My core mission is to achieve **zero-downtime** deployments and **high availability** (like the Immortal Jutsu!). I leverage **Terraform** for Infrastructure as Code, manage microservices using **Docker** and **Kubernetes (EKS)**, and orchestrate complex **CI/CD** pipelines using **Jenkins** and **GitLab** to deliver code faster (up to 30% reduction in release time).</p>
+								
+								<p>I focus heavily on observability using **Prometheus** and **Grafana** to proactively monitor system health, which has helped reduce incident response time by **40%**. I thrive on implementing strategies like **blue-green and canary deployments** to ensure seamless feature rollouts and collaborate effectively with development teams using advanced Git workflows.</p>
 
-									I’m deeply committed to continuous learning and staying updated with the latest trends in DevOps and cloud technologies. Whether it’s building robust CI/CD pipelines, managing cloud infrastructure, or troubleshooting complex systems, I’m always eager to tackle new challenges and deliver impactful results.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Profile:</span> <span>DevOps Engineer</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Could computing &amp; AWS DevOps Engineer</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Cloud Computing & AWS DevOps</span></li>
+									<li class="d-flex"><span>Key Focus:</span> <span>CI/CD Automation & Kubernetes Operations</span></li>
 									<li class="d-flex"><span>Education:</span> <span>BTech </span></li>
 									<li class="d-flex"><span>Language:</span> <span>English, Telugu & Hindi</span></li>
-									<!-- <li class="d-flex"><span>BI Tools:</span> <span>Microsoft PowerBI &amp; </span></li> -->
-									<!-- li class="d-flex"><span>Other Skills:</span> <span>Cloud, Excel, Git, JIRA, Blogging,</span></li> -->
 									<li class="d-flex"><span>Interest:</span> <span>Traveling, Photography, Teaching, Sports & Books</span></li>
 									
 								</ul>
@@ -293,32 +379,29 @@
 							<div class="text">
 								<p class="mb-4">
 									<span class="number" data-number="10">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
+									<span>&nbsp; Missions Completed (Projects)</span>
 								</p>
-								<p><a href=https://www.linkedin.com/in/hemanthgogineni/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+								<p><a href="https://www.linkedin.com/in/hemanthgogineni/" class="btn btn-primary py-3 px-3">LinkedIn Profile</a></p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-    </section>
+    </section>
 
 
 
 	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p> Motivated and detail-oriented DevOps Engineer. Proficient in CI/CD pipelines, containerization, and cloud services.
-				Experienced with tools like Jenkins, Docker, Kubernetes, and AWS. Eager to leverage technical skills and collaborative
-				abilities to optimize deployment processes and enhance operational efficiency. Passionate about continuous learning and
-				implementing innovative solutions to improve system reliability and performance</p>
-          </div>
-        </div>
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Mission Log</h1>
+            <h2 class="mb-4">The Journey (Experience)</h2>
+            <p> Motivated and detail-oriented DevOps Engineer. Proficient in CI/CD pipelines, containerization, and cloud services. Experienced with tools like Jenkins, Docker, Kubernetes, and AWS. Eager to leverage technical skills and collaborative abilities to optimize deployment processes and enhance operational efficiency.</p>
+          </div>
+        </div>
 
 		<div class="row">
 			<h1 class="big-4">Experience</h1>
@@ -330,16 +413,15 @@
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
 						<span class="date"> JAN-2024 TO Present </span>
-						<h2>Software Engineer </h2>
-						<span class="position">KPIT Technologies</span>
+						<h2>DevOps Engineer (Core Missions)</h2>
+						<span class="position">KPIT Technologies, Pune</span>
 						<p class="mt-4">
 							<ul>
-								<li>Automated end-to-end CI/CD pipelines using Jenkins, integrating Git version control and Maven for continuous build, testing,
-and deployment, reducing release time by 30%.</li>
-								<li> Orchestrated blue-green and canary deployments on Kubernetes, ensuring zero downtime during application upgrades and
-feature rollouts.</li>
-								<li>Deployed and managed containerized applications in Kubernetes clusters, ensuring high availability and fault tolerance through
-pod scaling, replica sets, and load balancing.</li>
+								<li>Automated end-to-end CI/CD pipelines (Jenkins, Git, Maven), **reducing release time by 30%**.</li>
+								<li> Orchestrated **blue-green and canary deployments** on Kubernetes, ensuring **zero downtime** during application upgrades.</li>
+								<li>Managed containerized applications in Kubernetes (EKS) clusters, guaranteeing high availability via **pod scaling** and **load balancing**.</li>
+								<li>Configured **Prometheus/Grafana** monitoring and custom alerts, **reducing incident response time by 40%**.</li>
+								<li>Built and managed scalable AWS infrastructure using **Terraform** for consistent, automated provisioning.</li>
 							</ul>
 						</p>
 					</div>
@@ -349,14 +431,15 @@ pod scaling, replica sets, and load balancing.</li>
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
 						<span class="date">JUNE-2023 TO JAN-2024 </span>
-						<h2>Engineer</h2>
-						<span class="position">KPIT Technologies</span>
+						<h2>Associate DevOps Engineer (Foundation Missions)</h2>
+						<span class="position">KPIT Technologies, Pune</span>
 						<p class="mt-4">
 							<ul>
-								<li>Automated Confluence documentation updates with Python scripts, reducing manual effort and ensuring real-time visibility</li>
-								<li>Managed and optimized AWS infrastructure (EC2, EBS, VPC), enhancing application scalability, availability, and cost efficiency.</li>
-								<!-- <li>Designed Grafana dashboards for real-time system monitoring and performance tracking, improving visibility and reducing downtime
-risks.</li> -->
+								<li>Developed and maintained CI/CD pipelines in **GitLab** using custom runners, improving build stability.</li>
+								<li>Automated Confluence documentation and build processes with **Python scripts**, significantly reducing manual effort.</li>
+								<li>Managed and optimized AWS infrastructure (EC2, EBS, VPC), enhancing **scalability** and **cost efficiency**.</li>
+								<li>Integrated **Gerrit** and **Git** for source control, applying advanced **cherry-pick strategies** to streamline selective merges.</li>
+								<li>Standardized environment setups using **Docker**, minimizing “works on my machine” issues across teams.</li>
 							</ul>
 						</p>
 					</div>
@@ -368,268 +451,261 @@ risks.</li> -->
 		<br>
 
 		<div class="row">
-			<h1 class="big-4">Education</h1>
+			<h1 class="big-4">Academy</h1>
 			<div class="underline"></div>
 		</div>
 		<br>
 		
 			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019-2023</span>
-    					<h2>BTech</h2>
-    					<span class="position">Lovely Professional University</span>
-    					<p class="mt-4">CGPA: 7.5</p>
-    				</div>
-    			</div>
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2019-2023</span>
+    					<h2>Bachelor of Computer Science Engineering</h2>
+    					<span class="position">Lovely Professional University</span>
+    					<p class="mt-4">CGPA: 7.5</p>
+    				</div>
+    			</div>
 
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2017-2019</span>
-    					<h2>Intermediate</h2>
-    					<span class="position">Sri Pratibha Junior College</span>
-    					<p class="mt-4">CGPA: 9.8</p>
-    				</div>
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2017-2019</span>
+    					<h2>Intermediate</h2>
+    					<span class="position">Sri Pratibha Junior College</span>
+    					<p class="mt-4">CGPA: 9.8</p>
+    				</div>
 				</div>
-    		</div>
+    		</div>
 
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
 
-   
+   
 
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on Complete Deployment .</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Automation Scrolls (Featured Projects)</h2>
+            <p>Showcasing end-to-end automation and system deployment solutions.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="#">Jenkins on Server Push Based Approach CICD</a></h3>
-                <p> Implementing Nginx as a Reverse Proxy for the PetClinic Application! 🐾
-					I’m excited to share a significant milestone in my recent deployment of the PetClinic application: integrating Nginx as a reverse proxy! This addition has greatly enhanced the app's performance and security.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">Jenkins Server Push Based Approach CICD</a></h3>
+                <p>Implementing Nginx as a Reverse Proxy for the PetClinic Application. Enhanced performance, security, and scalability by setting up a robust ingress layer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="#">Project Guide On Jenkins Integration with Sonar Server: A Complete Guide</a></h3>
-                <p>I'm thrilled to share that we've completed a significant milestone in our development pipeline! We've integrated SonarQube with Jenkins, automating our code quality checks and boosting our development efficiency.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">Jenkins Integration with Sonar Server (SecDevOps)</a></h3>
+                <p>Integrated SonarQube into Jenkins CI/CD pipelines to automate code quality checks, static analysis, and vulnerability scanning, enforcing higher code standards.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="#">Building and Testing a Flask App with Docker: A Step-by-Step Guide </a></h3>
-                <p>Creating and testing a Flask application using Docker can streamline your development process, ensuring consistency across different environments. </p>
-              </div>
-            </div>
-          </div>
-        </div>
+                <h3 class="heading"><a href="#">Flask App Deployment with Docker & Kubernetes</a></h3>
+                <p>Containerized a Python Flask application using Docker and deployed it onto a Kubernetes cluster for consistent, scalable, and reproducible builds across environments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<!-- <div class="row d-flex justify-content-center">   -->
-			<!-- <div class="col-md-4 d-flex ftco-animate">
+		 <div class="row d-flex justify-content-center">   
+			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				<a href="https://github.com/Kumargogi" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
-				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+  
+				  <h3 class="heading"><a href="https://github.com/Kumargogi">Full Infrastructure as Code (IaC) on AWS</a></h3>
+				  <p>Utilizing **Terraform** to provision and manage a secure, multi-tier AWS environment (VPC, EKS, RDS, S3), ensuring infrastructure drift control.</p>
 				</div>
-			  </div>
+			  </div>
 			</div>
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
 				</a>
 				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
-				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
-				</div> -->
-			  </div>
+  
+				  <h3 class="heading"><a href="#">Monitoring & Observability with Prometheus/Grafana</a></h3>
+				  <p>Designed and deployed a comprehensive monitoring stack using Prometheus and Grafana to track Kubernetes resource usage and application performance metrics.</p>
+				</div>
+			  </div>
 			</div>
 		 </div>
-	  </div>
-    </section>
+	  </div>
+    </section>
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
+      <div class="container">
 		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="200">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="25">0</strong>
+                <span>Automation Scripts</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Major Projects</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="40">0</strong>
+                <span>% Time Saved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
+						<h2>View the entire Jutsu Scrolls on<span> GitHub  </span> </h2>
 						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden Automation stories </h4>
 						<br>
 						<p><a href="https://github.com/Kumargogi" class="btn btn-primary py-3 px-5">GitHub</a></p>
 						</div>
 					</div>
 				</div>
-			<!-- </div> -->
-		</div>
+			</div>
 	</section>
 
 
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Connect with the Shinobi</h2>
+            <p>Below are the details to reach out to me for collaborations or inquiries!</p>
+          </div>
+        </div>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Pune, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+917842888770</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">hemanthgogineni5@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/19e2LqtsLlCruMazy044vGK4DQGi50j2n/view?usp=sharing">https://drive.google.com/file/d/19e2LqtsLlCruMazy044vGK4DQGi50j2n/view?usp=sharing</a></p>
-	          </div>
-          </div>
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Pune, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://+917842888770">+91 7842888770</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:hemanthgogineni5@gmail.com">hemanthgogineni5@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/19e2LqtsLlCruMazy044vGK4DQGi50j2n/view?usp=sharing" target="_blank">View Resume Link</a></p>
+	          </div>
+          </div>
 
-		  <div class="container">
+		  <div class="container">
 			<br>
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSegcCfpVkPky4kYkjSap3oINnM9yII7P_vLPaqLzaojJekHbQ/viewform?usp=header" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+					<h2>Have a<span> Question for the Shinobi?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSegcCfpVkPky4kYkjSap3oINnM9yII7P_vLPaqLzaojJekHbQ/viewform?usp=header" class="btn btn-primary py-3 px-5" target="_blank">Click Here</a> </h2>
 				</div>
 			</div>
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/musta-shaik/"><span class="icon-linkedin"></span></a></li>  
-					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
-					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
-				      <li class="ftco-animate"><a href="https://www.instagram.com/hustling_guy77/"><span class="icon-instagram"></span></a></li>
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="YOUR_LINKEDIN_URL" target="_blank"><span class="icon-linkedin"></span></a></li>  
+                      <li class="ftco-animate"><a href="YOUR_TWITTER_URL" target="_blank"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://hashnode.com/@hemanth57" target="_blank"><span class="icon-blog"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/hustling_guy77/" target="_blank"><span class="icon-instagram"></span></a></li>
 					</ul>
 				<br>
-		   </div>
-   </div>
- </section>
+		   </div>
+   </div>
+ </section>
 
 
- 
+ 
 	
-    <footer class="ftco-footer ftco-section">
+    <footer class="ftco-footer ftco-section">
 		<div class="container">
-		  <div class="row">
+		  <div class="row">
 			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+  
+			  <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Template adapted by Hemanth
+	</p>
 			</div>
-		  </div>
+		  </div>
 		</div>
-	  </footer>
+	  </footer>
 
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
 </html>
